@@ -1,0 +1,13 @@
+.error-page{
+   text-align: center;
+   margin-top: 12%;
+}
+
+.error-page p{
+    font-size: 17px;
+}
+
+.not-found{
+    color: rgb(170, 167, 167);
+    font-style: italic;
+}
