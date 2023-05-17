@@ -2,6 +2,7 @@ import React from 'react';
 import './Cart.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrashCan } from '@fortawesome/free-solid-svg-icons';
+import { useNavigate } from 'react-router-dom';
 const Cart = ({ cart, clearCart, children }) => {
     let total = 0;
     let shipping = 0;
@@ -13,6 +14,7 @@ const Cart = ({ cart, clearCart, children }) => {
     }
     const tax = parseFloat((total * 0.1).toFixed(2));
     const grandTotal = total + shipping + tax;
+
     return (
         <div className='cart'>
             <h4>Order Summary</h4>
@@ -23,6 +25,7 @@ const Cart = ({ cart, clearCart, children }) => {
             <h5>Grand Total: {grandTotal.toFixed(2)}</h5>
             <button onClick={clearCart} className='delete-btn'>Delete Cart <FontAwesomeIcon className = 'icon' icon = {faTrashCan}/></button>
             {children}
+           
         </div>
     );
 };

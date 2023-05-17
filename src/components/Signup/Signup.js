@@ -5,7 +5,7 @@ import { AuthContext } from '../../context/UserContext';
 const Signup = () => {
     const [error, setError] = useState('');
     const [user, setUser] = useState({});
-    const { signupWithEmailPassword } = useContext(AuthContext);
+    const { signUp } = useContext(AuthContext);
     const handleSubmit = (event) =>{
         event.preventDefault();
         const form = event.target;
@@ -27,8 +27,9 @@ const Signup = () => {
             return;
         }
 
-        signupWithEmailPassword(email, password)
+        signUp(email, password)
         .then(result =>{
+            console.log(result)
             setUser(result.user)
             form.reset();
         })

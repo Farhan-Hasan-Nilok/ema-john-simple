@@ -60,7 +60,7 @@ const Shop = () => {
             </div>
             <div className="cart-container">
                 <Cart clearCart = {clearCart} cart={cart}>
-                    <Link to = '/orders'> <button onClick={clearCart} className='delete-btn'>Review Cart </button></Link>
+                    <Link to = '/orders'> <button className='delete-btn'>Review Cart </button></Link>
                 </Cart>
             </div>
         </div>

@@ -8,6 +8,8 @@ import ErrorPage from '../components/ErrorPage/ErrorPage';
 import { productsAndCartLoader } from '../loaders/productsAndCartLoader';
 import Signup from '../components/Signup/Signup';
 import Login from '../components/Login/Login';
+import PrivateRoute from './PrivateRoute';
+import Shipping from '../components/Shipping/Shipping';
 
 export const router = createBrowserRouter([
     {
@@ -29,6 +31,10 @@ export const router = createBrowserRouter([
             {
             path: '/inventory', 
             element: <Inventory/>
+            },
+            {
+            path: '/shipping', 
+            element: <PrivateRoute><Shipping/></PrivateRoute>
             },
 
             {
